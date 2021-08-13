@@ -12,7 +12,7 @@ const [favourites, setFavourites] = useState([]);
 const [input,SetInput]=useState('');
 const CallMovie=async(input)=>{
   const key=process.env.REACT_APP_APIKEY
-  const url=`http://www.omdbapi.com/?s=${input}&apikey=${key}`;
+  const url=`https://www.omdbapi.com/?s=${input}&apikey=${key}`;
   const data=await fetch(url)
   const jsonData=await data.json()
   if(jsonData.Search){
